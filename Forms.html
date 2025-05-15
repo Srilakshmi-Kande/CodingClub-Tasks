@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+    <style>
+     form{
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+     }
+     input{
+        margin-top: 5px;
+        width: 350px;
+        height: 30px;
+        border-radius: 5px;
+        border: 2px solid rgb(215, 205, 205);
+     }
+     input[type="radio"]{
+        width: 20px;
+        height: 15px;
+        margin-top: 10px;
+        margin-left: 20px;
+     }
+     input:hover{
+        border: 2px solid rgb(0, 0, 0);
+        background: #f0f0f0;
+     }
+     button{
+        width: 100px;
+        height: 40px;
+        font-size: 20px;
+        font-weight: bold;
+        color: #59595a;
+        border-radius: 10px;
+     }
+     button:hover{
+        background: #9a9a9a;
+        border: none;
+     }
+    </style>
+</head>
+<body>
+    <form method="" action="#">
+        <fieldset>
+            <legend>User personal information</legend><br>
+            <label for="name">Enter Your Full Name </label><br>
+            <input type="text" placeholder="Enter Your Name here..." name="name" required/><br><br>
+            <label for="email">Enter Your Email </label><br>
+            <input type="email" placeholder="abc@gmail.com" name="email" required/>
+            <br><br>
+            <label for="password">Enter Your Password </label><br>
+            <input type="password" placeholder="" name="password" max="30" min="8" required/>
+            <br><br>
+            <label for="password">Confirm Your Password </label><br>
+            <input type="password" placeholder="" name="password" max="30" min="8" required/>
+            <br><br>
+            <label for="gender">Enter Your gender </label><br>
+            <input type="radio" name="gender" value="Male"/>Male
+            <input type="radio" name="gender" value="Female"/>Female
+            <input type="radio" name="gender" value="Others"/>Others
+            <br><br>
+            <label for="dob">Enter Your Date of Birth </label><br>
+            <input type="date" placeholder="" name="dob" required/>
+            <br><br>
+            <label for="address">Enter Your Address</label><br>
+            <textarea name="address" placeholder="Enter Your Address here...." rows="5" cols="45" style="border-radius: 5px;margin-top: 5px;"></textarea><br>
+            <br>
+            <button type="submit" value="Submit">Submit</button>
+            <button type="reset" value="Reset">Reset</button>
+        </fieldset>
+    </form>
+
+</body>
+</html>
