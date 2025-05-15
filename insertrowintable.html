@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inserting Row in Table</title>
+    <style>
+        body{
+            width: 100%;
+            height: 100%;
+        }
+        .container{
+            width: 90%;
+            height: 100%;
+            padding: 10px;
+            margin: 10px;
+            margin-left: 20px;
+        }
+        input{
+            height: 25px;
+            border:1px solid #111;
+            border-radius: 5px;
+        }
+        .input-box{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+        .table-content{
+            width: 70%;
+            height: 100%;
+            margin-inline: 22.5%;
+            margin-top: 20px;
+        }
+        table{
+            width: 50%;
+        }
+        table th{
+            background-color: #333;
+            color: #fff;
+            height: 30px;
+        }
+        button{
+            height: 30px;
+            width: 100px;
+            letter-spacing: 1px;
+            font-weight: 600;
+            font-size: 15px;
+            color: white;
+            background-color: #555;
+            border-radius: 5px;
+            border: none;
+        }
+        button:hover{
+            background-color: #111;
+        }
+        @media screen and (min-width:500px) {
+            table{
+                width: 80%;
+                margin: 0%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="input-box">
+            <input type="number" id="rollno" placeholder="Roll Number" required />
+            <input type="text" id="name" placeholder="Name" required />
+            <input type="number" id="pyear" placeholder="Passing Year" required />
+            <input type="number" id="tmarks" placeholder="Total Marks" required />
+            <input type="number" id="omarks" placeholder="Obtained Marks" required />
+            <button id="addbtn">Add Row</button>
+        </div>
+        <div class="table-content">
+            <table id="details"  border="1" cellspacing="0" cellpadding="5">
+            <th>S.No</th>
+            <th>Roll No</th>
+            <th>Name</th>
+            <th>Passing Year</th>
+            <th>Total Marks</th>
+            <th>Obtained Marks</th>
+        </table>
+        </div>
+    </div>
+
+    <script>
+        let count = 1;
+
+        const addbtn = document.getElementById("addbtn");
+
+        function addRow(){
+            const rollno = document.getElementById("rollno").value;
+            const name = document.getElementById("name").value;
+            const pyear = document.getElementById("pyear").value;
+            const tmarks = document.getElementById("tmarks").value;
+            const omarks = document.getElementById("omarks").value;
+
+            const table = document.getElementById("details");
+            const row = table.insertRow(-1);
+
+            row.insertCell(0).textContent = count;
+            row.insertCell(1).textContent = rollno;
+            row.insertCell(2).textContent = name;
+            row.insertCell(3).textContent = pyear;
+            row.insertCell(4).textContent= tmarks;
+            row.insertCell(5).textContent = omarks;
+
+            count++;
+
+            document.getElementById("rollno").value="";
+            document.getElementById("name").value="";
+            document.getElementById("pyear").value="";
+            document.getElementById("tmarks").value="";
+            document.getElementById("omarks").value="";
+
+        }
+
+        addbtn.addEventListener('click',addRow);
+    </script>
+</body>
+</html>
