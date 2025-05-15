@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day and Night Toggle</title>
+    <style>
+        .bod{
+            width: 100vw;
+            height: 100vh;
+            background: url("forestbg.jpg") ;
+            background-repeat: no-repeat;
+            background-size:cover;
+        }
+        button{
+            height: 40px;
+            width: 80px;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 20px;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+    <div class="bod">
+        <div class="toggle">
+        <button style="background: linear-gradient(to bottom,yellow,red);" onclick="today()">Day</button>
+            <button style="background: linear-gradient(to bottom,rgb(31, 0, 151),black);" onclick="tonight()">Night</button>
+        </div>
+        <div id="day">
+            <div style="display: flex;">
+                <marquee style="visibility: visible;" id="birds" direction="right"><img src="bird1.gif" alt="" width="200px" height="200px"><img src="bird1.gif" alt="" width="200px" height="200px"></marquee>
+                <img id="image" src="sun-removebg-preview.png" alt="" align="right" width="200px" height="200px" style="padding-right:100px ;">
+            </div>
+        </div>
+    </div>
+    
+    
+    <script>
+        function tonight(){
+            const image = document.getElementById("image").src="istockphoto-467568161-612x612-removebg-preview.png";
+            const birds = document.getElementById("birds");
+            birds.style.visibility="hidden";
+            document.body.style.filter="brightness(50%) contrast(200%) hue-rotate(150deg)";
+        }
+        function today(){
+            const image = document.getElementById("image").src="sun-removebg-preview.png";
+            const birds = document.getElementById("birds");
+            birds.style.visibility="visible";
+            document.body.style.filter="none";
+        }
+    </script>
+
+</body>
+</html>
