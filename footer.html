@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Footer</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom,red,yellow);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .foot{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            margin-top: 280px;
+            padding-inline: 30px;
+            background-color: #222;
+            color: white;
+        }
+        .foots{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            padding: 10px;
+        }
+        .heads{
+            font-size: 30px;
+            font-weight: 700;
+            padding: 20px;
+            color: red;
+        }
+        p{
+            padding: 10px;
+        }
+        .last{
+            display: flex;
+            width: 100%;
+            background-color: #111;
+            color: #fff;
+            justify-content: space-between;
+            align-items: center;
+        }
+        @media  screen and (min-width:500px) {
+            .foot{
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+        }
+        @media screen and (min-width:1000px) {
+            .foot{
+                margin-top: 340px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1 align="center" style="color:white;padding: 30px;">Responsive Footer</h1><hr size="5" color="white">
+    <div class="foot">
+        <div><p class="heads">@Srilakshmi</p></div>
+        <div class="foots">
+            <p class="heads">Company</p>
+            <p>Home</p><p>About us</p><p>Services</p><p>Contact us</p>
+        </div>
+        <div  class="foots">
+            <p class="heads">Keep Connected</p>
+            <p>Facebook</p><p>Twitter</p><p>Instagram</p><p>Linked in</p>
+        </div>
+        <div  class="foots">
+            <p class="heads">Contact Info</p>
+            <p>13-xs-nksdbcs,ssfwefg,dshckj</p>
+            <p>+11 46732591</p>
+            <p>nmscsguygkw@gmail.com</p><p></p><p></p>
+        </div>
+    </div>
+    <div class="last">
+        <p>@ 2025 Srilakshmi websit.All rights reserved.</p>
+        <p>Company Information | Privacy Policy | Terms and conditions</p>
+    </div>
+</body>
+</html>
