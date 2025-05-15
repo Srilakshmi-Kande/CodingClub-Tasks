@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Time Table</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        body{
+            height: auto;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container{
+            height: auto;
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-block: 10% 10%;
+            gap: 10px;
+        }
+        h1{
+            text-decoration:underline;
+        }
+        .hall{
+            width: 100%;
+            display: flex;
+            justify-content:space-between;
+            align-items: center;
+        }
+        .hall code{
+            font-weight: 600;
+        }
+        table{
+            width: 100%;
+            height: 300px;
+            text-align: center;
+        }
+       
+        #lunch p{
+            text-align:center;
+            transform: translate(-5%, -30%) rotate(270deg);
+        }
+        @media (min-width:1100px) {
+            .hall{
+                width: 80%;
+            }
+            table{
+                width: 80%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>B.TECH.IV SEMESTER (REGULAR)</h1>
+        <h1>TIME-TABLE</h1>
+        <div class="hall">
+            <h3>Lecture Hall No:</h3>
+            <code>W.E.F: 17-02-2025</code>
+        </div>
+        <table border="1" cellspacing="0" cellpadding="5">
+            <tr>
+                <th>Day/Time</th>
+                <th>8:30</th>
+                <th>9:30</th>
+                <th>10:30</th>
+                <th>11:30</th>
+                <th>12:30</th>
+                <th>2:00</th>
+                <th>3:00</th>
+                <th>4:00</th>
+            </tr>
+            <tr>
+                <td>MON</td>
+                <td colspan="2">BWD</td>
+                <td colspan="2">BWD LAB</td>
+                <td rowspan="6" id="lunch"><p>Lunch break</p></td>
+                <td colspan="2">DAA</td>
+                <td>SM</td>
+            </tr>
+            <tr>
+                <td>TUE</td>
+                <td>MEA</td>
+                <td>DAA</td>
+                <td colspan="2">DELD</td>
+                <td colspan="3">Algorithms Laboratory</td>
+            </tr>
+            <tr>
+                <td>WED</td>
+                <td colspan="2">SM</td>
+                <td colspan="2">MEA</td>
+                <td colspan="3">ALP and VHDL lab</td>
+               
+            </tr>
+            <tr>
+                <td>THU</td>
+                <td>MEA</td>
+                <td>CONM</td>
+                <td colspan="2">DELD</td>
+                <td>SM</td>
+                <td colspan="2">CO</td>
+            </tr>
+            <tr>
+                <td>FRI</td>
+                <td>CONM</td>
+                <td>DAA</td>
+                <td colspan="2">CO</td>               
+                <td colspan="2">CONM</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>SAT</td>
+                <td colspan="4"></td>
+                <td colspan="3"></td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
